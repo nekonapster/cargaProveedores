@@ -1,0 +1,9 @@
+div.dt-search{
+  margin-right: 5%;
+  margin-top: 10px;
+}
+
+.modal-box-fixed{
+  max-width: 90vw; /* Adjust the width as needed */
+  height: 90vh; /* Adjust the height as needed */
+}
