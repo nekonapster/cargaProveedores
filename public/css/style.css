@@ -1,9 +1,29 @@
-div.dt-search{
-  margin-right: 5%;
-  margin-top: 10px;
-}
-
 .modal-box-fixed{
   max-width: 90vw; /* Adjust the width as needed */
-  height: 90vh; /* Adjust the height as needed */
+  height: 80vh; /* Adjust the height as needed */
+}
+
+.dt-search{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 18px;
+  text-transform: lowercase;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.dt-input{
+  display: flex;
+  justify-content: end;
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+
+thead, tbody{
+  text-align: center;
 }

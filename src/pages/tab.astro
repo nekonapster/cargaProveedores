@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 
     <!-- import datatable css cdn -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css"
-    />
+    /> -->
     <!-- import tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -179,125 +179,130 @@
                           <h3 class="font-bold text-lg">Proveedor</h3>
 
                           <!-- MODAL BODY START -->
-
-                          <!-- <div class="overflow-x-auto"> -->
-                            <div class="card-body card-bordered">
-                              <div class="grid grid-cols-4 gap-2">
-                                <input
-                                  type="text"
-                                  placeholder="ID"
-                                  class="input input-sm input-bordered w-full"
-                                  value="BUE001"
-                                />
-                                <input
-                                  type="text"
-                                  placeholder="CC"
-                                  class="input input-sm input-bordered w-full"
-                                  required
-                                />
-                                <input
-                                  type="text"
-                                  placeholder="DESCRIPCION"
-                                  class="input input-sm input-bordered w-full"
-                                  required
-                                />
-                                <input
-                                  type="text"
-                                  placeholder="RUBRO"
-                                  class="input input-sm input-bordered w-full"
-                                  required
-                                />
-                                <input
-                                  type="tel"
-                                  placeholder="TEL"
-                                  class="input input-sm input-bordered w-full"
-                                  required
-                                />
-                                <input
-                                  type="text"
-                                  placeholder="PROVEEDOR"
-                                  class="input input-sm input-bordered w-full"
-                                  required
-                                />
-                                <input
-                                  type="text"
-                                  placeholder="CONTACTO"
-                                  class="input input-sm input-bordered w-full"
-                                  required
-                                />
-                                <input
-                                  type="email"
-                                  placeholder="CORREO"
-                                  class="input input-sm input-bordered w-full"
-                                  required
-                                />
-                              </div>
-
-                              <div class="card-actions justify-start py-3">
-                                <button class="btn btn-sm btn-primary"
-                                  >Modificar</button
-                                >
-                                <button class="btn btn-sm btn-secondary"
-                                  >Agregar</button
-                                >
-                              </div>
+                            <!-- <div class="overflow-x-auto"> -->
+                          <div class="card-body card-bordered">
+                            <div class="grid grid-cols-4 gap-2">
+                              <input
+                                type="text"
+                                placeholder="ID"
+                                class="input input-sm input-bordered w-full"
+                                value="BUE001"
+                              />
+                              <input
+                                type="text"
+                                placeholder="CC"
+                                class="input input-sm input-bordered w-full"
+                                required
+                              />
+                              <input
+                                type="text"
+                                placeholder="DESCRIPCION"
+                                class="input input-sm input-bordered w-full"
+                                required
+                              />
+                              <input
+                                type="text"
+                                placeholder="RUBRO"
+                                class="input input-sm input-bordered w-full"
+                                required
+                              />
+                              <input
+                                type="tel"
+                                placeholder="TEL"
+                                class="input input-sm input-bordered w-full"
+                                required
+                              />
+                              <input
+                                type="text"
+                                placeholder="PROVEEDOR"
+                                class="input input-sm input-bordered w-full"
+                                required
+                              />
+                              <input
+                                type="text"
+                                placeholder="CONTACTO"
+                                class="input input-sm input-bordered w-full"
+                                required
+                              />
+                              <input
+                                type="email"
+                                placeholder="CORREO"
+                                class="input input-sm input-bordered w-full"
+                                required
+                              />
                             </div>
+
+                            <div class="card-actions justify-start py-3">
+                              <button class="btn btn-sm btn-primary"
+                                >Modificar</button
+                              >
+                              <button class="btn btn-sm btn-secondary"
+                                >Agregar</button
+                              >
+                            </div>
+                          </div>
                           <!-- </div> -->
 
                           <!-- tabla dentro del modal ↓ -->
-                              <table class="table" id="myTable">
-                                <!-- head -->
-                                <thead class="bg-yellow-500 text-black">
-                                  <tr>
-                                    <th></th>
-                                    <!-- <th class="">ID</th> -->
-                                    <th class="">ID</th>
-                                    <th class="">CC</th>
-                                    <th class="">DESCRIPCION</th>
-                                    <th class="">RUBRO</th>
-                                    <th class="">TEL</th>
-                                    <th class="">PROVEEDOR</th>
-                                    <th class="">CONTACTO</th>
-                                    <th class="">CORREO</th>
-                                  </tr>
-                                </thead>
-                                <tbody class="">
-                                  <tr class="bg-base-200">
-                                    <td>1</td>
-                                    <td>BUE001</td>
-                                    <td>51420003</td>
-                                    <td>REFRIGERIOS</td>
-                                    <td>MATERIALES Y SUMINISTROS</td>
-                                    <td>1125-037551</td>
-                                    <td>AQUALINE 00</td>
-                                    <td>PEDRO DUARTE</td>
-                                    <td>AQUALINE@MAIL.COM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>2</td>
-                                    <td>BUE003</td>
-                                    <td>73542005</td>
-                                    <td>SNACKS</td>
-                                    <td>MATERIALES Y SUMINISTROS</td>
-                                    <td>1125-059873</td>
-                                    <td>SNACKDELIGHT 02</td>
-                                    <td>JUAN PEREZ</td>
-                                    <td>JUAN.PEREZ@MAIL.COM</td>
-                                  </tr>
-                                  <tr>
-                                    <td>3</td>
-                                    <td>BUE004</td>
-                                    <td>84653006</td>
-                                    <td>ALMUERZOS</td>
-                                    <td>MATERIALES Y SUMINISTROS</td>
-                                    <td>1125-070984</td>
-                                    <td>LUNCHBOX 03</td>
-                                    <td>ANA GARCIA</td>
-                                    <td>ANA.GARCIA@MAIL.COM</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            <!-- tabla dentro del modal ↑ -->
+                          <div class="mt-2">
+                            <table
+                              class="table"
+                              id="myTable"
+                              style="width:100%;"
+                            >
+                              <!-- head -->
+                              <thead class="bg-yellow-500 text-black">
+                                <tr>
+                                  <th></th>
+                                  <!-- <th class="">ID</th> -->
+                                  <th class="">ID</th>
+                                  <th class="">CC</th>
+                                  <th class="">DESCRIPCION</th>
+                                  <th class="">RUBRO</th>
+                                  <th class="">TEL</th>
+                                  <th class="">PROVEEDOR</th>
+                                  <th class="">CONTACTO</th>
+                                  <th class="">CORREO</th>
+                                </tr>
+                              </thead>
+                              <tbody class="">
+                                <tr class="bg-base-200">
+                                  <td>1</td>
+                                  <td>BUE001</td>
+                                  <td>51420003</td>
+                                  <td>REFRIGERIOS</td>
+                                  <td>MATERIALES Y SUMINISTROS</td>
+                                  <td>1125-037551</td>
+                                  <td>AQUALINE 00</td>
+                                  <td>PEDRO DUARTE</td>
+                                  <td>AQUALINE@MAIL.COM</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>BUE002</td>
+                                  <td>73542005</td>
+                                  <td>SNACKS</td>
+                                  <td>MATERIALES Y SUMINISTROS</td>
+                                  <td>1125-059873</td>
+                                  <td>SNACKDELIGHT 02</td>
+                                  <td>JUAN PEREZ</td>
+                                  <td>JUAN.PEREZ@MAIL.COM</td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td>BUE003</td>
+                                  <td>84653006</td>
+                                  <td>ALMUERZOS</td>
+                                  <td>MATERIALES Y SUMINISTROS</td>
+                                  <td>1125-070984</td>
+                                  <td>LUNCHBOX 03</td>
+                                  <td>ANA GARCIA</td>
+                                  <td>ANA.GARCIA@MAIL.COM</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- tabla dentro del modal ↑ -->
 
                           <div class="modal-action">
                             <form method="dialog">
