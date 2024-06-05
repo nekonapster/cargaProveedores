@@ -27,6 +27,33 @@
     <div class="container mx-auto">
       <div class="card shadow-xl card-compact">
         <div class="card-body">
+          <!-- themes ↓-->
+          <div class="flex justify-end">
+            <label class="swap swap-rotate col-end-4">
+              <input type="checkbox" class="theme-controller" value="dark" />
+              <svg
+                class="swap-off fill-current w-8 h-8"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+                >
+                </path>
+              </svg>
+              <svg
+                class="swap-on fill-current w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+                >
+                </path>
+              </svg>
+            </label>
+          </div>
+          <!-- themes ↑ -->
           <div class="grid grid-cols-2"></div>
           <div role="tablist" class="tabs tabs-lifted">
             <input
@@ -49,14 +76,15 @@
                     <div class="primerDiv flex items-center justify-between">
                       <input
                         type="text"
-                        value="ID"
+                        placeholder="ID"
                         class="input input-sm input-bordered max-w-xs w-40"
                       />
                       <select
                         name=""
                         id=""
-                        class="select select-bordered select-sm w-full max-w-xs"
+                        class="select select-bordered select-sm max-w-xs w-full"
                       >
+                        <option value="0">PROVEEDOR</option>
                         <option value="1">MARTIN</option>
                         <option value="2">SEBASTIAN</option>
                         <option value="3">MARIA EMILIA</option>
@@ -66,18 +94,24 @@
                       </select>
 
                       <input
-                        type="date"
-                        value="Fecha Factura"
+                        type="text"
+                        placeholder="Fecha de factura"
+                        name=""
+                        id=""
                         class="input input-sm input-bordered max-w-xs w-40"
-                      />
-                      <input
-                        type="date"
-                        value="Fecha Vencimiento"
-                        class="input input-sm input-bordered max-w-xs w-40"
+                        onfocus="(this.type='date')"
                       />
                       <input
                         type="text"
-                        value="Auxiliar"
+                        placeholder="Fecha de vencimiento"
+                        name=""
+                        id=""
+                        class="input input-sm input-bordered max-w-xs w-40"
+                        onfocus="(this.type='date')"
+                      />
+                      <input
+                        type="text"
+                        placeholder="Auxiliar"
                         class="input input-sm input-bordered max-w-xs w-40"
                       />
                     </div>
@@ -103,16 +137,27 @@
                         class="input input-sm input-bordered max-w-xs w-40"
                         placeholder="Importe"
                       />
-                      <input
-                        type="text"
-                        class="input input-sm input-bordered max-w-xs w-40"
-                        placeholder="Tipo de gastos"
-                      />
-                      <input
-                        type="text"
-                        class="input input-sm input-bordered max-w-xs w-40"
-                        placeholder="Proyecto"
-                      />
+
+                      <select
+                        name=""
+                        id=""
+                        class="select select-bordered select-sm max-w-xs w-48"
+                      >
+                        <option value="">GASTOS</option>
+                        <option value="">Gastos 1</option>
+                        <option value="">Gastos 2</option>
+                        <option value="">Gastos 3</option>
+                      </select>
+                      <select
+                        name=""
+                        id=""
+                        class="select select-bordered select-sm max-w-xs w-48"
+                      >
+                        <option value="">PROYECTO</option>
+                        <option value="">Proyecto 1</option>
+                        <option value="">Proyecto 2</option>
+                        <option value="">Proyecto 3</option>
+                      </select>
                       <label class="cursor-pointer label w-28"
                         >Activacion
                         <input
@@ -125,32 +170,46 @@
                     <div
                       class="tercerDIV flex items-center justify-between mt-5"
                     >
+                      <select
+                        name=""
+                        id=""
+                        class="select select-bordered select-sm max-w-xs w-48"
+                      >
+                        <option value="">PAGO</option>
+                        <option value="">pago 1</option>
+                        <option value="">pago 2</option>
+                        <option value="">pago 3</option>
+                      </select>
+
                       <input
                         type="text"
-                        class="input input-sm input-bordered max-w-xs w-40"
-                        placeholder="Pago"
-                      />
-                      <input
-                        type="text"
-                        class="input input-sm input-bordered max-w-xs w-40"
-                        placeholder="Fecha Movimiento"
-                      />
-                      <input
-                        type="date"
+                        placeholder="Fecha de pago"
                         name=""
                         id=""
                         class="input input-sm input-bordered max-w-xs w-40"
+                        onfocus="(this.type='date')"
                       />
-                      <input
-                        type="text"
-                        class="input input-sm input-bordered max-w-xs w-40"
-                        placeholder="Banco"
-                      />
-                      <input
-                        type="text"
-                        class="input input-sm input-bordered max-w-xs w-40"
-                        placeholder="Cta. Banco"
-                      />
+                      <select
+                        name=""
+                        id=""
+                        class="select select-bordered select-sm max-w-xs w-40"
+                      >
+                        <option value="">BANCOS</option>
+                        <option value="">Proincia</option>
+                        <option value="">Frances</option>
+                        <option value="">Itahu</option>
+                        <option value="">Santander</option>
+                      </select>
+                      <select
+                        name=""
+                        id=""
+                        class="select select-bordered select-sm max-w-xs w-full"
+                      >
+                        <option value="">Cuenta de banco</option>
+                        <option value="">bue2424000314772024</option>
+                        <option value="">bue0909000314772024</option>
+                        <option value="">bue1515000314772024</option>
+                      </select>
                       <input
                         type="text"
                         class="input input-sm input-bordered max-w-xs w-40"
@@ -179,7 +238,7 @@
                           <h3 class="font-bold text-lg">Proveedor</h3>
 
                           <!-- MODAL BODY START -->
-                            <!-- <div class="overflow-x-auto"> -->
+                          <!-- <div class="overflow-x-auto"> -->
                           <div class="card-body card-bordered">
                             <div class="grid grid-cols-4 gap-2">
                               <input
@@ -188,12 +247,90 @@
                                 class="input input-sm input-bordered w-full"
                                 value="BUE001"
                               />
-                              <input
-                                type="text"
-                                placeholder="CC"
-                                class="input input-sm input-bordered w-full"
-                                required
-                              />
+                              <select
+                              name=""
+                              id=""
+                              class="select select-bordered select-sm max-w-xs w-full"
+                            >
+                              <option value="">Cuenta Contable</option>
+                              <option value="5,1420006">5,1420006</option>
+                              <option value="5,1420007">5,1420007</option>
+                              <option value="5,1510003">5,1510003</option>
+                              <option value="5,1520003">5,1520003</option>
+                              <option value="11130001">11130001</option>
+                              <option value="11130002">11130002</option>
+                              <option value="11130003">11130003</option>
+                              <option value="11130016">11130016</option>
+                              <option value="11130017">11130017</option>
+                              <option value="11130018">11130018</option>
+                              <option value="12130001">12130001</option>
+                              <option value="12140001">12140001</option>
+                              <option value="12150001">12150001</option>
+                              <option value="12170001">12170001</option>
+                              <option value="41110001">41110001</option>
+                              <option value="41110008">41110008</option>
+                              <option value="41120002">41120002</option>
+                              <option value="41130003">41130003</option>
+                              <option value="41210008">41210008</option>
+                              <option value="41210009">41210009</option>
+                              <option value="41210015">41210015</option>
+                              <option value="41210016">41210016</option>
+                              <option value="41410001">41410001</option>
+                              <option value="41420001">41420001</option>
+                              <option value="41420002">41420002</option>
+                              <option value="51110001">51110001</option>
+                              <option value="51110002">51110002</option>
+                              <option value="51110004">51110004</option>
+                              <option value="51110006">51110006</option>
+                              <option value="51110007">51110007</option>
+                              <option value="51210001">51210001</option>
+                              <option value="51210002">51210002</option>
+                              <option value="51210003">51210003</option>
+                              <option value="51210004">51210004</option>
+                              <option value="51210005">51210005</option>
+                              <option value="51210006">51210006</option>
+                              <option value="51310001">51310001</option>
+                              <option value="51310002">51310002</option>
+                              <option value="51310003">51310003</option>
+                              <option value="51310004">51310004</option>
+                              <option value="51320001">51320001</option>
+                              <option value="51410001">51410001</option>
+                              <option value="51410002">51410002</option>
+                              <option value="51410003">51410003</option>
+                              <option value="51410004">51410004</option>
+                              <option value="51410005">51410005</option>
+                              <option value="51410006">51410006</option>
+                              <option value="51410008">51410008</option>
+                              <option value="51410009">51410009</option>
+                              <option value="51420001">51420001</option>
+                              <option value="51420002">51420002</option>
+                              <option value="51420003">51420003</option>
+                              <option value="51420004">51420004</option>
+                              <option value="51420005">51420005</option>
+                              <option value="51420006">51420006</option>
+                              <option value="51420007">51420007</option>
+                              <option value="51420008">51420008</option>
+                              <option value="51420009">51420009</option>
+                              <option value="51420010">51420010</option>
+                              <option value="51420011">51420011</option>
+                              <option value="51510001">51510001</option>
+                              <option value="51510003">51510003</option>
+                              <option value="51510004">51510004</option>
+                              <option value="51510005">51510005</option>
+                              <option value="51510006">51510006</option>
+                              <option value="51510008">51510008</option>
+                              <option value="51510010">51510010</option>
+                              <option value="51510012">51510012</option>
+                              <option value="51510013">51510013</option>
+                              <option value="51610001">51610001</option>
+                              <option value="51710001">51710001</option>
+                              <option value="51810006">51810006</option>
+                              <option value="51920001">51920001</option>
+                              <option value="51920002">51920002</option>
+                              <option value="41110002">41110002</option>
+                              <option value="41110004">41110004</option>
+                              
+                            </select>
                               <input
                                 type="text"
                                 placeholder="DESCRIPCION"
@@ -312,7 +449,7 @@
                           <!-- MODAL BODY ENDS -->
                         </div>
                       </dialog>
-                      <button class="btn btn-accent">guardar</button>
+                      <button class="btn btn-accent">Guardar</button>
                     </div>
                   </div>
                 </div>
@@ -330,7 +467,131 @@
               role="tabpanel"
               class="tab-content bg-base-100 border-base-300 rounded-box p-6"
             >
-              Tab content 3
+              <!-- <div class="container mx-auto"> -->
+              <div class="card card-compact border">
+                <div class="card-body">
+                  <div class="flex">
+                    <input
+                      type="text"
+                      placeholder="Fecha"
+                      class="input input-sm input-bordered w-40"
+                      onfocus="(this.type='date')"
+                    />
+                  </div>
+                  <div class="flex justify-evenly">
+                    <fieldset class="border rounded-xl p-3 w-44">
+                      <legend class="text-base" class="text-base"
+                        >BANCO PROVINCIA</legend
+                      >
+                      <input
+                        type="number"
+                        placeholder="A893"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                      <input
+                        type="number"
+                        placeholder="A430"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                      <input
+                        type="number"
+                        placeholder="Parroquia"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                      <input
+                        type="number"
+                        placeholder="ADM"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                    </fieldset>
+                    <fieldset class="border rounded-xl p-3 w-44">
+                      <legend class="text-base">SANTANDER</legend>
+                      <input
+                        type="number"
+                        placeholder="Sant 1"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                      <input
+                        type="number"
+                        placeholder="Sant 2"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                      <input
+                        type="number"
+                        placeholder="Sant 3"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                    </fieldset>
+
+                    <fieldset class="border rounded-xl p-3 w-44">
+                      <legend class="text-base">SANTANDER P.</legend>
+                      <input
+                        type="number"
+                        placeholder="893"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                      <input
+                        type="number"
+                        placeholder="430"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                      <input
+                        type="number"
+                        placeholder="1486"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                    </fieldset>
+
+                    <fieldset class="border rounded-xl p-3 w-44">
+                      <legend class="text-base">Carga de datos Cuatro</legend>
+                      <input
+                        type="number"
+                        placeholder="FCI A$"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                      <input
+                        type="number"
+                        placeholder="FCI Plus"
+                        class="input input-sm input-bordered w-44 mb-2"
+                      />
+                    </fieldset>
+                    <div>
+                      <fieldset class="border rounded-xl p-3 w-44 mb-2">
+                        <legend class="text-base">Digital</legend>
+
+                        <input
+                          type="number"
+                          placeholder="Mercado Pago"
+                          class="input input-sm input-bordered w-44 mb-2"
+                        />
+                      </fieldset>
+                      <fieldset class="border rounded-xl p-3 w-44">
+                        <legend  class="text-base">Efectivo</legend>
+                          <input
+                          type="number"
+                          placeholder="Caja"
+                          class="input input-sm input-bordered w-44 mb-2"
+                          />
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="mt-5">
+
+                      <button class="btn btn-sm btn-info">Calcular total</button>
+                      <input
+                      type="text"
+                      placeholder="CALCULADO"
+                      class="input input-sm input-bordered w-40"
+                      />
+                      <div class="divider divider-primary"></div>
+                      <div class="flex justify-end">
+                        <button class="btn btn-accent">Guardar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
